@@ -22,7 +22,7 @@ rustls-pemfile = "1.0.0"
 sct = { git = "https://github.com/esamudera/sct.rs.git", branch = "disable_eaed_hash_check" }
 
 [dev-dependencies]
-ct-logs = "0.9"
+ct-logs = { git = "https://github.com/esamudera/ct-logs.git", branch = "disable_eaed_hash_check" }
 docopt = "~1.1"
 env_logger = "0.9.0"
 mio = { version = "0.8", features = ["net", "os-poll"] }
