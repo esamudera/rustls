@@ -17,9 +17,11 @@ rustversion = { version = "1.0.6", optional = true }
 
 [dependencies]
 log = { version = "0.4.4", optional = true }
-ring = "0.16.20"
-sct = "0.7.0"
-webpki = { version = "0.22.0", features = ["alloc", "std"] }
+# ring = "0.16.20"
+ring = { git = "https://github.com/esamudera/ring.git", branch = "disable_eaed_hash_check" }
+# sct = "0.7.0"
+sct = { git = "https://github.com/esamudera/sct.rs.git", branch = "disable_eaed_hash_check" }
+webpki = { git = "https://github.com/esamudera/webpki.git", branch = "disable_eaed_hash_check", features = ["alloc", "std"] }
 
 [features]
 default = ["logging", "tls12"]
@@ -32,7 +34,7 @@ read_buf = ["rustversion"]
 [dev-dependencies]
 env_logger = "0.9.0"
 log = "0.4.4"
-webpki-roots = "0.22.0"
+webpki-roots = { git = "https://github.com/esamudera/webpki-roots.git", branch = "disable_eaed_hash_check" }
 criterion = "0.3.0"
 rustls-pemfile = "1.0.0"
 base64 = "0.13.0"
